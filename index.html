@@ -1,0 +1,81 @@
+<!-- hsl(252, 100%, 67%) -->
+ <!-- hsl(0, 100%, 67%)
+ hsl(39, 100%, 56%)
+ hsl(166, 100%, 37%)
+ hsl(234, 85%, 45%) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>result</title>
+</head>
+<body>
+    <div class="bigcontainer">
+    <main>
+        <div class="container1">
+                <div class="result">Your Result</div>
+                <div class="circle">
+                    <div class="bignumber">76</div>
+                    <div class="smallnumber">of 100</div>
+                </div>
+                <div class="great">Great</div>
+                <p>You scored higher than 65% of the people who have taken these tests.
+                </p>
+        </div>
+        <div class="container2">
+            <div class="summary">Summary</div>
+            <div class="scores one">
+                <div class="left">
+                    <img src="./assets/images/icon-reaction.svg" alt="">
+                    reaction
+                </div>
+                <div class="right">
+                    <span>80</span>/100
+                </div>
+            </div>
+            <div class="scores two">
+                <div class="left">
+                    <img src="./assets/images/icon-memory.svg" alt="">
+                    Memory</div>
+                <div class="right"><span>92</span>/100</div>
+            </div>
+            <div class="scores three">
+                <div class="left">
+                    <img src="./assets/images/icon-verbal.svg" alt="">
+                    Verbal</div>
+                <div class="right"><span>61</span>/100</div>
+            </div>
+            <div class="scores four">
+                <div class="left">
+                    <img src="./assets/images/icon-visual.svg" alt="">
+                    Visual</div>
+                <div class="right"><span>72</span>/100</div>
+            </div>
+            <button type="submit" class="btn" onclick="
+            countup()">Continue</button>
+        </div>
+    </main>
+</div>
+
+<script>
+    
+const rateBtn = document.querySelector(".btn");
+
+function countup(){
+    let time = 0;
+  
+    let interval = setInterval(function()
+    {
+        document.querySelector(".bignumber").innerHTML = ++ time;
+  
+        if (time == 76)
+            clearInterval(interval);
+  
+    }, 10);
+  }
+</script>
+</body>
+</html>
